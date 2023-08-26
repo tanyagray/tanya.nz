@@ -3,12 +3,32 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: 'en-US',
-  title: 'VitePress',
+  title: "Tanya's Space",
   description: 'Vite & Vue powered static site generator.',
+
+  head: [
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-M1NW9DWX0F',
+      },
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M1NW9DWX0F');`,
+    ],
+  ],
 
   themeConfig: {
     nav: [
-      { text: 'Example', link: '/example' },
+      { text: 'Articles', link: '/articles/' },
+      { text: 'Notes', link: '/notes/' },
+      { text: 'Learn', link: '/learn/' },
 
       // {
       //   text: 'Dropdown Menu',
