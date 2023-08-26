@@ -6,7 +6,7 @@ import { data as articles } from './articles.data.ts'
   <header>
     <h2><a :href="article.url">{{ article.title }}</a></h2>
     <time datetime="article.date">
-      {{ article.relativeDate }}
+      <i>Posted {{ article.relativeDate }}</i>
     </time>
   </header>
   <div v-html="article.excerpt"></div>

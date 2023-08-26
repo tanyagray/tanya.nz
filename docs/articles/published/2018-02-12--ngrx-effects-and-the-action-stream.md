@@ -3,8 +3,6 @@ title: Understanding NgRx Effects and the Action Stream
 date: 2018-02-12
 ---
 
-# Understanding NgRx Effects and the Action Stream
-
 NgRx Store provides us a single stream of actions where we can either dispatch or subscribe any action across our whole app. This action stream is an Observable.
 
 NgRx Effects allow us to listen for particular action types, and "do something" when that action happens. Any effect you write is also an Observable.
