@@ -77,6 +77,46 @@ We must use this if/else condition to avoid a `TypeError`.
 
 Defining a set of `MediaStreamConstraints` where both `audio` and `video` are set to `false` is considered invalid, and calling `getUserMedia()` with those invalid constraints will result in a `TypeError`.
 
+## Toggle microphone
+
+### Get active audio track
+
+Have to get all audio tracks.
+
+```ts
+const audioTracks = stream.getAudioTracks();
+```
+
+### Remove the track
+
+```ts
+if (audioTracks.length) {
+  const audioTrack = audioTracks[0];
+  stream.removeTrack(audioTrack);
+  audioTrack.stop();
+
+  console.log('removed audio from media stream');
+}
+```
+
+### Add the track
+
+```ts
+if (audioTracks.length) {
+   ...
+} else {
+  // add audio stream
+  const tempStream = await navigator.mediaDevices.getUserMedia({
+    audio: true,
+  });
+  const audioTrack = tempStream.getAudioTracks()[0];
+  tempStream.removeTrack(audioTrack);
+  stream.addTrack(audioTrack);
+
+  console.log('added audio to media stream');
+}
+```
+
 ## Considerations
 
 When using bluetooth audio, the user may experience a "popping" noise and a change in audio quality when the microphone audio track is added/removed from the `MediaStream`.
