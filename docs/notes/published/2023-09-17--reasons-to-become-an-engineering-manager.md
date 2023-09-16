@@ -1,5 +1,6 @@
 ---
-title: Reasons to become an engineering manager by Leonardo Borges
+title: Reasons to become an engineering manager
+author: Leonardo Borges
 date: 2023-09-17
 ---
 

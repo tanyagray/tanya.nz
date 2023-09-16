@@ -1,5 +1,6 @@
 ---
-title: Capital Inefficiency by John Cutler
+title: Capital Inefficiency
+author: John Cutler
 date: 2023-09-17
 ---
 

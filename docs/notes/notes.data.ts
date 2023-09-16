@@ -16,6 +16,7 @@ export default createContentLoader('notes/published/*.md', {
       return {
         title: note.frontmatter.title,
         date: note.frontmatter.date,
+        author: note.frontmatter.author,
         relativeDate: formatDistanceToNow(note.frontmatter.date, {
           addSuffix: true,
         }),
