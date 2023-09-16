@@ -3,6 +3,10 @@ title: Media Device Permissions
 date: 2023-09-09
 ---
 
+Media device permissions in the browser are a tricky beast, and the levels of support also differ across browsers. This article covers some of the basics of identifying device permissions, and also calls out a few of the challenges you're likely to face during implementation.
+
+---
+
 ## Device Availability vs Permission
 
 There are two levels of device availability:
